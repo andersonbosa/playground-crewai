@@ -1,20 +1,16 @@
-import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
-from crewai import Agent, Task, Crew, Process
+import os
+import sys
 
-from langchain_google_genai import ChatGoogleGenerativeAI
+from shared_playground_crewai.llm_client import create_llm_client
+
+llm = create_llm_client(api_key=os.getenv("GOOGLE_API_KEY"), model="gemini-pro")
 
 print("########## SETUPING ##########")
-
-# To load gemini (this api is for free: https://makersuite.google.com/app/apikey)
-gemini_api_key = os.getenv("GOOGLE_API_KEY")
-
-llm = ChatGoogleGenerativeAI(
-    model="gemini-pro", verbose=True, temperature=0.1, google_api_key=gemini_api_key
-)
+from crewai import Agent, Crew, Process, Task
 
 print("########## STARTING ##########")
 random_quote_writer = Agent(
