@@ -35,10 +35,3 @@ class LLMClient:
     def get_response(self, input_text):
         return self.llm.generate_response(input_text)
 
-
-# Example of use of the LLMClient class
-if __name__ == "__main__":
-    try:
-        llm_client = LLMClient(model="unsupported-model")
-    except UnsupportedModelError as e:
-        print(f"Error: {e}")

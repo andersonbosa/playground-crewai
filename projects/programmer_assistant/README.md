@@ -18,6 +18,12 @@ To use the GU agent, you can execute the script `main.py` providing the followin
 - `--coding "YOUR REQUEST"`: Uses Gu agent programming ability to generate code based on your request.
 - `--mentoring "YOUR QUESTION"`: Uses Gu agent mentoring ability to receive technical guidance in response to your question.
 
+### Settings
+
+Be sure to configure the following environment variables in the `.env` file:
+
+- `GOOGLE_API_KEY`: Your Google API key to use Gemini service (required)
+
 ### Example of use
 
 ```bash
@@ -37,12 +43,6 @@ The results of interactions with agent GU are saved in the `outputs` folder. Eac
 - Python 3.x
 - CrewAI
 - dotenv
-
-### Settings
-
-Be sure to configure the following environment variables in the `.env` file:
-
-- `GOOGLE_API_KEY`: Your Google API key to use Gemini service (required)
 
 ## Credits
 
