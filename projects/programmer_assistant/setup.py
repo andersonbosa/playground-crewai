@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        "shared-playground-crewai @ git+https://github.com/andersonbosa/playground-crewai.git@branch#subdirectory=projects/shared"
+        "shared-playground-crewai @ git+https://github.com/andersonbosa/playground-crewai.git@branch#subdirectory=projects/shared",
         "crewai",
         "python-dotenv",
     ],
