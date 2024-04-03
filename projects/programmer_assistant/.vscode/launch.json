@@ -5,12 +5,34 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Debug: mentoring",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "args": [
+        "--mentoring",
+        "'what is a linkedhashmap'"
+      ]
+    },
+    {
+      "name": "Debug: coding",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "args": [
+        "--coding",
+        "'Generate the HTML of a product selling landing page'"
+      ]
+    },
+    {
       "name": "Python Debugger: Current File with Arguments",
       "type": "debugpy",
       "request": "launch",
       "program": "${file}",
       "console": "integratedTerminal",
       "args": "${command:pickArgs}"
-    }
+    },
   ]
 }

@@ -1,12 +1,18 @@
 # projects/programmer_assistant
 
+### About
 
+lorem ipsum
 
+### Demo
 
 ![](demo.png)
 
 
----
+-------------------------------------------------------------------------------
+
+
+## Prompt used with ChatGPT to assist developing the Gu Assistant
 
 We are creating an AI Agent in Python using a library. Our goal is to create an Agent that acts as a Senior Software Engineer and helps me with my projects and questions.
 
@@ -59,7 +65,6 @@ mentoring_skill = Task(
     expected_output="TBD",
 )
 ```
-
 
 So, in short, your mission is:
 - [ ] Define agent goal
