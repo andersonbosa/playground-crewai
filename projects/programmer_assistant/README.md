@@ -1,77 +1,48 @@
 # projects/programmer_assistant
 
-### About
 
-lorem ipsum
+## About 
 
-### Demo
+- Gu, the Specialist Software Engineer Agent
 
-![](demo.png)
+GU is an agent specializing in software engineering, designed to assist in programming tasks and provide technical guidance.It is able to generate code based on provided requirements and answer technical questions, offering clear explanations and relevant recommendations.
 
-
--------------------------------------------------------------------------------
+## Installation
 
 
-## Prompt used with ChatGPT to assist developing the Gu Assistant
+## Usage
 
-We are creating an AI Agent in Python using a library. Our goal is to create an Agent that acts as a Senior Software Engineer and helps me with my projects and questions.
+To use the GU agent, you can execute the script `main.py` providing the following options:
 
-I will briefly explain to you about the customization of our agent:
-```
-Key Attributes for Customization
-- Role: Specifies the agent's job within the crew, such as 'Analyst' or 'Customer Service Rep'.
-- Goal: Defines what the agent aims to achieve, in alignment with its role and the overarching objectives of the crew.
-- Backstory: Provides depth to the agent's persona, enriching its motivations and engagements within the crew.
-- Tools: Represents the capabilities or methods the agent uses to perform tasks, from simple functions to intricate integrations.
+- `--coding "YOUR REQUEST"`: Uses Gu agent programming ability to generate code based on your request.
+- `--mentoring "YOUR QUESTION"`: Uses Gu agent mentoring ability to receive technical guidance in response to your question.
+
+### Example of use
+
+```bash
+python main.py --coding "Implement a function to order a Python list using bubble-sort"
 ```
 
-To create our Senior Software Engineer Agent (let's call him Gu) we need:
-- [X] Define agent role: Senior Software Engineer
-- [ ] Define agent goal
-- [ ] Define agent backstory
-
-We also need to define what types of skills the agent will have.Initially we will create two: program and mentor.
-
-"Programming" ability is to generate code as a final output based on requirements and other specifications and other pre-configured specifications.
-
-The "mentoring" ability is to answer technical questions and teach the topic asking as a final output based on requirements and other pre-configured specifications.
-
-Below is a piece of code that we will use to create our agent.
-```python
-gu_agent = Agent(
-    role="TBD",
-    goal="TBD",
-    backstory="""TBD""",
-    llm=llm, 
-    allow_delegation=False, 
-    max_rpm=10, 
-    max_iter=5, 
-    verbose=(
-        True
-        if config.env == "development"
-        else False
-    ),
-)
-
-programming_skill = Task(
-    agent=gu_agent,
-    description="TBD",
-    expected_output="TBD",
-)
-
-mentoring_skill = Task(
-    agent=gu_agent,
-    description="TBD",
-    expected_output="TBD",
-)
+```bash
+python main.py --mentoring "What is the difference between inheritance and composition in object -oriented programming?"
 ```
 
-So, in short, your mission is:
-- [ ] Define agent goal
-- [ ] Define agent backstory
-- [ ] Define the "mentoring" ability
-  - [ ] define its description
-  - [ ] define its expected output
-- [ ] Define the "programming" ability
-  - [ ] define its description
-  - [ ] define its expected output
+### Backup results
+
+The results of interactions with agent GU are saved in the `outputs` folder. Each file generated contains the date, type of interaction and a description of the request.
+
+### Dependencies
+
+- Python 3.x
+- CrewAI
+- dotenv
+
+### Settings
+
+Be sure to configure the following environment variables in the `.env` file:
+
+- `GOOGLE_API_KEY`: Your Google API key to use Gemini service (required)
+
+## Credits
+
+This project was developed by [Anderson Bosa](https://github.com/andersonbosa).
