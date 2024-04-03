@@ -39,7 +39,7 @@ def parse_filename(resultType, identifier):
     timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
     identifier_clean = re.sub(r"[^\w\s]", "_", identifier).replace(" ", "_")
     filename = f"{timestamp}__{resultType}__{identifier_clean}.md"
-    return filename
+    return filename.lower()
 
 
 def save_data_to_file(filename, data):
