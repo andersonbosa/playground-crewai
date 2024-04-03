@@ -59,7 +59,7 @@ def output_result(result):
     print("============================== END ================================")
 
 
-if __name__ == "__main__":
+def main():
     args = use_argparse()
     gu = create_gu_agent()
 
@@ -80,3 +80,7 @@ if __name__ == "__main__":
         data=result,
     )
     print(f"[+] Result saved in: {output_path}")
+
+
+if __name__ == "__main__":
+    main()

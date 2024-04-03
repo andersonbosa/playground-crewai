@@ -12,7 +12,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "projeto-cli = cli.main:main",  # Substitua 'projeto-cli' pelo nome da sua CLI e 'cli.main:main' pelo caminho para a função principal da sua CLI
+            "gucli = cli.main:main",  # Substitua 'projeto-cli' pelo nome da sua CLI e 'cli.main:main' pelo caminho para a função principal da sua CLI
         ],
     },
 )
