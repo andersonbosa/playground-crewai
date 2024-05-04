@@ -3,6 +3,8 @@ aiosignal==1.3.1
 annotated-types==0.6.0
 anyio==4.3.0
 attrs==23.2.0
+black==24.3.0
+build==1.2.1
 cachetools==5.3.3
 certifi==2024.2.2
 charset-normalizer==3.3.2
@@ -51,6 +53,8 @@ opentelemetry-sdk==1.23.0
 opentelemetry-semantic-conventions==0.44b0
 orjson==3.9.15
 packaging==23.2
+pathspec==0.12.1
+platformdirs==4.2.0
 proto-plus==1.23.0
 protobuf==4.25.3
 pyasn1==0.5.1
@@ -58,13 +62,14 @@ pyasn1-modules==0.3.0
 pydantic==2.6.3
 pydantic_core==2.16.3
 Pygments==2.17.2
+pyproject_hooks==1.0.0
 python-dotenv==1.0.1
 PyYAML==6.0.1
 regex==2023.12.25
 requests==2.31.0
 rich==13.7.1
 rsa==4.9
--e git+https://github.com/andersonbosa/playground-crewai.git@ccf9733be11813f713d16f10b912f239e1868126#egg=shared_playground_crewai&subdirectory=projects/shared
+-e git+https://github.com/andersonbosa/playground-crewai.git@7ce84ae0c9100470f4d1188be817996b47e00b19#egg=shared_playground_crewai&subdirectory=projects/shared
 sniffio==1.3.1
 SQLAlchemy==2.0.28
 tenacity==8.2.3
