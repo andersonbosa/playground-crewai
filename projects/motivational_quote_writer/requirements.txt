@@ -32,7 +32,7 @@ instructor==0.5.2
 jsonpatch==1.33
 jsonpointer==2.4
 langchain==0.1.11
-langchain-community==0.0.27
+langchain-community==0.2.5
 langchain-core==0.1.30
 langchain-google-genai==0.0.9
 langchain-openai==0.0.5
